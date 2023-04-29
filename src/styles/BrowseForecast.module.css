@@ -1,0 +1,35 @@
+.imageContainer {
+    position: absolute;
+    opacity: 50%;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.browseForecastContainer {
+    /* background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: blueviolet;
+    height: 50vh;
+    width: 100vh;
+    min-width: 100%; */
+    position: absolute;
+    top: 300px;
+    left:25%;
+    height: 100px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.onTheTop{
+    z-index: 1;
+}
+.buttonPadding{
+    padding-left: 15px;
+    padding-top: 5px;
+    min-width:150px;
+}
+
