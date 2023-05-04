@@ -31,7 +31,7 @@ function App() {
     <div>
       <div className={styles.container} style={{ backgroundImage: `url(${bgImage})`}}>
 
-      </div>
+      
       <div className={styles.headerContainer} ></div>
       <div className={styles.header}>
         <h1 className=''>Weather Forecast</h1>
@@ -40,7 +40,7 @@ function App() {
       <BrowseForecast forecastData={onForecastData} />
 
       {showForecast &&  dataContent}
-
+      </div>
     </div>
   );
 }

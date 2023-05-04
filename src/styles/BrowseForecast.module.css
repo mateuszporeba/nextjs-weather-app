@@ -4,7 +4,7 @@
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
-    
+
 }
 
 .browseForecastContainer {
@@ -18,26 +18,31 @@
     min-width: 100%; */
     position: absolute;
     top: 300px;
-    left:25%;
+    left: 25%;
     height: 100px;
     width: 50%;
     display: flex;
     justify-content: center;
 }
+
 @media screen and (max-width: 400px) {
     .browseForecastContainer {
-      flex-direction: column;
+        flex-direction: column;
+        background-color: red;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
-  }
+}
 
-.onTheTop{
+.onTheTop {
     z-index: 1;
 }
-.buttonPadding{
+
+.buttonPadding {
     padding-left: 15px;
     padding-top: 5px;
-    min-width:150px;
+    min-width: 150px;
     min-width: fit-content;
     white-space: nowrap;
 }
-
