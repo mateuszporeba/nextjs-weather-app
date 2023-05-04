@@ -17,27 +17,25 @@ export default function InputField(props) {
     if (citiesData.filter(city => city.name.toLowerCase().startsWith(event.target.value.toLowerCase())).length > 0) {
       setInputValue(event.target.value);
       props.forecastInputValue(event.target.value);
+      console.log('onChangeInputHandler!!!!');
       setRecommendedCities(true);
     }
-    if(event.target.value.length < inputValue.length){
+    if(event.key === 'Backspace'){
       setRecommendedCities(true);
     }
-    //console.log(citiesData.filter(city => city.name.startsWith('Wa' || 'wa')));
+
   }
 
   const onClickDropDownHandler = (cityName) => {
     setInputValue(cityName);
+    //props.forecastInputValue(inputValue);
     props.forecastInputValue(cityName);
+    console.log('onClickDropDownHandler:   '+cityName);
+    console.log('onClickDropDownHandler inputValue:   '+inputValue);
     props.recommendedCityClick();
     setRecommendedCities(false);
   }
 
-  // {
-  //   citiesData.filter(city => city.name.toLowerCase().startsWith(inputValue.toLowerCase())).map(
-  //     cityName => (
-  //       <Dropdown.Item key={cityName.name} onClick={ () => onClickDropDownHandler(cityName.name)}>{cityName.name}</Dropdown.Item>
-  //     ))}
-//   <Dropdown.Menu className='dropdown-menu'>
   return (
     <div>
 

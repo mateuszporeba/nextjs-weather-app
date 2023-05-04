@@ -7,10 +7,12 @@ import Button from 'react-bootstrap/Button';
 
 export default function BrowseForecast(props) {
 
-  const [inputValue, setInputValue] = useState("London");
+  const [inputValue, setInputValue] = useState('');
 
   const OnInputData = (inputCity) => {
+    console.log('OnInputData:   '+ inputCity);
     setInputValue(inputCity);
+    console.log('OnInputData inputValue:   '+inputValue);
   }
 
   const checkForecast = async () => {
@@ -34,10 +36,9 @@ export default function BrowseForecast(props) {
   // }
 
   const clickHandler = () => {
-    setForecast(true);
-
-    console.log('klik');
-    checkForecast(inputValue);
+    //setForecast(true);
+    console.log('clickHandler   :'+inputValue);
+      checkForecast(inputValue);
   }
 
   return (
