@@ -13,33 +13,28 @@ function App() {
   const onForecastData = (forecastObj) => {
     setData(forecastObj)
     setShowForecast(true);
-    console.log('data:' + data);
-    console.log('showForecast: ' + showForecast);
-    console.log('jestem w OnForecastData');
-    console.log('showForecast: ' + showForecast);
   }
-  
+
   let dataContent = '';
   if (data != null || data != {}) {
     dataContent = <WeatherData data={data} />
   }
 
-// /{showForecast &&  <WeatherData data={data} />}
+  // /{showForecast &&  <WeatherData data={data} />}
 
-//<div className={styles.container} style={{ backgroundImage: `url(${headerImg})`}}>
+  //<div className={styles.container} style={{ backgroundImage: `url(${headerImg})`}}>
   return (
     <div>
-      <div className={styles.container} style={{ backgroundImage: `url(${bgImage})`}}>
+      <div className={styles.container} style={{ backgroundImage: `url(${bgImage})` }}>
 
-      
-      <div className={styles.headerContainer} ></div>
-      <div className={styles.header}>
-        <h1 className=''>Weather Forecast</h1>
-      </div>
+        <div className={styles.headerContainer} ></div>
+        <div className={styles.header}>
+          <h1 className=''>Weather Forecast</h1>
+        </div>
 
-      <BrowseForecast forecastData={onForecastData} />
+        <BrowseForecast forecastData={onForecastData} />
 
-      {showForecast &&  dataContent}
+        {showForecast && dataContent}
       </div>
     </div>
   );
