@@ -17,7 +17,21 @@
   
     margin-left: auto;
     margin-right: auto;
+    animation: dataContainer-appear 1s ease-out forwards;
+    
 }
+@keyframes dataContainer-appear {
+    from {
+      opacity: 0;
+      transform: translateY(5rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 .weatherDataContainer{
     background-color: azure;
 }
